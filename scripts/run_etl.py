@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 # Allows: `python scripts/run_etl.py` without installing the package
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from bootcamp_data.etl import ETLConfig, run_etl

@@ -7,18 +7,23 @@ python -m venv .venv
 
 ### 2. Activate virtual environment
  Windows:
-.venv\Scripts\activate
+ 
+ .venv\Scripts\activate
  
  macOS/Linux:
+ 
+ 
 source .venv/bin/activate
 
 ### 3. Install dependencies and local package
-pip install -r requirements.txt
-pip install -e .
+uv pip install -r requirements.txt
+
+
 
 # Run ETL
 ### Run the ETL script to process raw data and generate the analytics tables.
-PYTHONPATH=src uv run ./src/bootcamp_data/run_etl.py 
+
+PYTHONPATH=src uv run ./scripts/run_etl.py
 
 # Outputs
 ### After running the ETL script, the following files will be generated in the
