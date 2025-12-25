@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from pathlib import Path
 
+root = Path(__file__).resolve().parents[1] # لأي سكربت لاحقا
+
 @dataclass(frozen=True)
 class Paths:
     root: Path
@@ -9,7 +11,7 @@ class Paths:
     processed: Path
     external: Path
 
-def make_paths(rootL Path) -> Paths:
+def make_paths(root: Path) -> Paths:
     data = root / "data"
     return Paths(
         root=root,
@@ -17,4 +19,4 @@ def make_paths(rootL Path) -> Paths:
         cache=data / "cache",
         processed=data / "processed",
         external=data / "external",
-    )
+        )
